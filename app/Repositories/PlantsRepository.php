@@ -24,4 +24,13 @@ class PlantsRepository
         }
     }
 
+    public function store($request)
+    {
+        try {
+
+        } catch (\Throwable $exception) {
+
+        }
+    }
+
 }
