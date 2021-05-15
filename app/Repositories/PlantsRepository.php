@@ -24,13 +24,29 @@ class PlantsRepository
         }
     }
 
+    public function filter($request)
+    {
+        $plants = $this->plants
+            ->with(['floweringMonths' =>
+                function ($query) use ($request) {
+                    $query->orWhere('floweringMonths.name', 'like', '%' . $request['filter'] . '%');
+                }],
+                ['beePollination' =>
+                    function ($query) use ($request) {
+                        $query->orWhere('beePollination.name', 'like', '%' . $request['filter'] . '%');
+                    }])
+            ->get();
+        dd($plants);
+    }
+
     public function store($request)
     {
-        try {
+        $plants = $this->plants->fill($request);
+        $plants->save();
+        $plants->beePollination()->sync($request['bee_id']);
+        $plants->floweringMonths()->sync($request['month_id']);
+        dd($plants);
 
-        } catch (\Throwable $exception) {
-
-        }
     }
 
 }

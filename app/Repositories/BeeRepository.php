@@ -15,4 +15,20 @@ class BeeRepository
         $this->bee = $bee;
     }
 
+    public function listAll()
+    {
+        $response = $this->bee->with('pollinationPlants.floweringMonths')->get();
+        return $response;
+    }
+
+
+    public function store($request)
+    {
+        try {
+        $response = $this->bee->create($request);
+        } catch (\Throwable $exception){
+
+        }
+    }
+
 }

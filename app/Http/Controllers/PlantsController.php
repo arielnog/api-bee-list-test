@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\BeeRequest;
+use App\Http\Requests\PlantsRequest;
 use App\Models\Plants;
 use App\Services\PlantsService;
 use Illuminate\Http\Request;
@@ -42,10 +43,34 @@ class PlantsController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BeeRequest $request)
+    public function store(PlantsRequest $request)
     {
         $request->validated();
+        try {
+            $response = $this->plantsService->store($request->all());
+            return response([
+                "message" => "A Planta foi criada com sucesso",
+                "resource" => $response
+            ], 201);
+        } catch (ValidationException $exception) {
+            return response([
+                "message" => "Erro no envio de dados",
+                "details" => $exception->getMessage()
+            ], 422);
+        } catch (HttpResponseException $exception) {
+            return response($exception->getMessage());
+        } catch (Exception $exception) {
+            return response([
+                "message" => "Erro na criação da Planta",
+                "details" => $exception->getMessage()
+            ], 500);
+        }
 
+    }
+
+    public function filter(Request $request)
+    {
+        $plants = $this->plantsService->filter($request);
     }
 
     /**

@@ -14,6 +14,11 @@ class PlantsService
         $this->plantsRepository = $plantsRepository;
     }
 
+    public function filter($request)
+    {
+        $this->plantsRepository->filter($request);
+    }
+
     public function store($request)
     {
         return $this->plantsRepository->store($request);

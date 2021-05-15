@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BeeRequest;
 use App\Models\Bee;
 use App\Services\BeeService;
 use Illuminate\Http\Request;
@@ -22,7 +23,7 @@ class BeeController extends Controller
      */
     public function index()
     {
-        //
+        return $this->beeService->listAll();
     }
 
     /**
@@ -32,7 +33,7 @@ class BeeController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -41,9 +42,11 @@ class BeeController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BeeRequest $request)
     {
-        //
+        $request->validated();
+        $response = $this->beeService->store($request->all());
+
     }
 
     /**

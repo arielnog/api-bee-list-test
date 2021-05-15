@@ -17,8 +17,8 @@ class CreateBeesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('scientific_name');
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

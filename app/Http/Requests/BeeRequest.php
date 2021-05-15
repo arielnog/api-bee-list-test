@@ -26,19 +26,9 @@ class BeeRequest extends FormRequest
         $rules = [
             'name' => 'required',
             'scientific_name' => 'required',
-            'description' => 'required',
-            'photo_path' => 'file|image|size:5242880',
-            'month_id' => 'array|required',
-            'bee_id' => 'array|required'
         ];
         return $rules;
     }
 
-    public function messages()
-    {
-        $messages = [
-        ];
 
-        return $messages;
-    }
 }

@@ -18,8 +18,9 @@ class CreatePlantsTable extends Migration
             $table->string('name');
             $table->string('scientific_name');
             $table->text('description');
-            $table->string('photo_path');
+            $table->string('photo_path')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

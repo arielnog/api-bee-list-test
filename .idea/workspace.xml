@@ -3,16 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="124e87ed-4f3f-4e1b-9b2d-4112f0d3b63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BeeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PlantsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PlantsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BeeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BeeRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PlantsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PlantsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/BeeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BeeRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/PlantsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PlantsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/BeeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BeeService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/PlantsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/PlantsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_14_174129_create_bees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_14_174129_create_bees_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_14_174417_create_plants_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_14_174417_create_plants_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -157,6 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621013896946</updated>
       <workItem from="1621013907491" duration="10705000" />
+      <workItem from="1621071093760" duration="5588000" />
     </task>
     <servers />
   </component>
@@ -173,5 +182,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

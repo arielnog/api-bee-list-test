@@ -15,4 +15,14 @@ class BeeService
         $this->beeRepository = $beeRepository;
     }
 
+    public function listAll()
+    {
+        return $this->beeRepository->listAll();
+    }
+
+    public function store($request)
+    {
+        return $this->beeRepository->store();
+    }
+
 }

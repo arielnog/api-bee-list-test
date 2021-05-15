@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class PlantsRequest extends FormRequest
 {
@@ -13,7 +15,7 @@ class PlantsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +25,25 @@ class PlantsRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $rules = [
+            'name' => 'required',
+            'scientific_name' => 'required',
+            'description' => 'required',
+            'photo_path' => 'file|image|size:5242880',
+            'month_id' => 'array|required',
+            'bee_id' => 'array|required'
         ];
+
+        return $rules;
+    }
+
+    public function failedValidation(Validator $validator)
+    {
+        $errors = $validator->errors(); // Here is your array of errors
+        $response = response()->json([
+            "message" => "Erro no envio de dados",
+            "details" => $errors->messages()
+        ], 422);
+        throw new HttpResponseException($response);
     }
 }
