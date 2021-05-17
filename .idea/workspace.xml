@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="124e87ed-4f3f-4e1b-9b2d-4112f0d3b63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PlantsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PlantsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BeeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BeeRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PlantsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PlantsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Plants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Plants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/BeeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BeeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/PlantsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PlantsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/BeeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BeeService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/PlantsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/PlantsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +154,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\beeApi" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -181,6 +176,7 @@
       <workItem from="1621013907491" duration="10705000" />
       <workItem from="1621071093760" duration="14378000" />
       <workItem from="1621248693816" duration="9253000" />
+      <workItem from="1621258558682" duration="386000" />
     </task>
     <servers />
   </component>
