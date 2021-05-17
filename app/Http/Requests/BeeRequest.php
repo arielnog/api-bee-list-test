@@ -27,6 +27,10 @@ class BeeRequest extends FormRequest
             'name' => 'required',
             'scientific_name' => 'required',
         ];
+
+        if (in_array($this->method(), ['PUT', 'PATCH'])) {
+            $rules = [];
+        }
         return $rules;
     }
 

@@ -29,10 +29,18 @@ class PlantsRequest extends FormRequest
             'name' => 'required',
             'scientific_name' => 'required',
             'description' => 'required',
-            'photo_path' => 'file|image|size:5242880',
+            'photo_path' => 'file|image',
             'month_id' => 'array|required',
             'bee_id' => 'array|required'
         ];
+
+        if (in_array($this->method(), ['PUT', 'PATCH'])) {
+            $rules = [
+                'photo_path' => 'file|image|size:5242880',
+                'month_id' => 'array',
+                'bee_id' => 'array'
+            ];
+        }
 
         return $rules;
     }

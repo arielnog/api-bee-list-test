@@ -26,69 +26,43 @@ class BeeController extends Controller
         return $this->beeService->listAll();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(BeeRequest $request)
     {
         $request->validated();
-        $response = $this->beeService->store($request->all());
-
+        try {
+            $response = $this->beeService->store($request->all());
+            return $response;
+        } catch (ValidationException $exception) {
+            return response()->json([
+                "message" => "Erro no envio de dados",
+                "details" => $exception->getMessage()
+            ], 422);
+        } catch (HttpResponseException $exception) {
+            return response()->json($exception->getMessage());
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param \App\Models\Bee $bee
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Bee $bee)
+    public function update(BeeRequest $request, $beeId)
     {
-        //
+        $request->validated();
+        try {
+            $response = $this->beeService->update($request->all());
+            return $response;
+        } catch (ValidationException $exception) {
+            return response()->json([
+                "message" => "Erro no envio de dados",
+                "details" => $exception->getMessage()
+            ], 422);
+        } catch (HttpResponseException $exception) {
+            return response()->json($exception->getMessage());
+        }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\Models\Bee $bee
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Bee $bee)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Bee $bee
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Bee $bee)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param \App\Models\Bee $bee
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Bee $bee)
     {
         //
